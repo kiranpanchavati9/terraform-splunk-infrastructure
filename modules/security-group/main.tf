@@ -21,6 +21,9 @@ resource "aws_vpc_security_group_ingress_rule" "api" {
   from_port         = var.api_port
   to_port           = var.api_port
   ip_protocol       = var.ip_protocol
+  tags = {
+    Name = "splunk-api-ingress"
+  }
 }
 
 # Allow Splunk Management Traffic (Inbound)
@@ -31,6 +34,9 @@ resource "aws_vpc_security_group_ingress_rule" "management" {
   from_port         = var.management_port
   to_port           = var.management_port
   ip_protocol       = var.ip_protocol
+  tags = {
+    Name = "splunk-management-ingress"
+  }
 }
 
 # Allow Splunk Receiving Traffic (Inbound)
@@ -41,6 +47,9 @@ resource "aws_vpc_security_group_ingress_rule" "receiving" {
   from_port         = var.receiving_port
   to_port           = var.receiving_port
   ip_protocol       = var.ip_protocol
+  tags = {
+    Name = "splunk-receiving-ingress"
+  }
 }
 
 # Allow Splunk Web Interface Traffic (Inbound)
@@ -51,6 +60,9 @@ resource "aws_vpc_security_group_ingress_rule" "web" {
   from_port         = var.web_interface_port
   to_port           = var.web_interface_port
   ip_protocol       = var.ip_protocol
+  tags = {
+    Name = "splunk-web-ingress"
+  }
 }
 
 # Allow Splunk API Traffic (Outbound)
@@ -61,6 +73,9 @@ resource "aws_vpc_security_group_egress_rule" "api" {
   from_port         = var.api_port
   to_port           = var.api_port
   ip_protocol       = var.ip_protocol
+  tags = {
+    Name = "splunk-api-egress"
+  }
 }
 
 # Allow Splunk Management Traffic (Outbound)
@@ -71,6 +86,9 @@ resource "aws_vpc_security_group_egress_rule" "management" {
   from_port         = var.management_port
   to_port           = var.management_port
   ip_protocol       = var.ip_protocol
+  tags = {
+    Name = "splunk-management-egress"
+  }
 }
 
 # Allow Splunk Receiving Traffic (Outbound)
@@ -81,6 +99,9 @@ resource "aws_vpc_security_group_egress_rule" "receiving" {
   from_port         = var.receiving_port
   to_port           = var.receiving_port
   ip_protocol       = var.ip_protocol
+  tags = {
+    Name = "splunk-receiving-egress"
+  }
 }
 
 # Allow Splunk Web Interface Traffic (Outbound)
@@ -91,4 +112,7 @@ resource "aws_vpc_security_group_egress_rule" "web" {
   from_port         = var.web_interface_port
   to_port           = var.web_interface_port
   ip_protocol       = var.ip_protocol
+  tags = {
+    Name = "splunk-web-egress"
+  }
 }
