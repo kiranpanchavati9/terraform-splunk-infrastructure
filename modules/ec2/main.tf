@@ -6,7 +6,7 @@ resource "aws_instance" "instance" {
   instance_type          = var.instance_type
   key_name               = var.key_name
   iam_instance_profile   = var.iam_instance_profile
-  vpc_security_group_ids = [module.security-group.security_group_ids]
+  vpc_security_group_ids = [module.splunk_security_group.security_group_id]
   tags = merge(
     {
       Name = each.key
