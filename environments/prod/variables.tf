@@ -86,6 +86,11 @@ variable "tags" {
   default     = {}
 }
 
+
+#############################################
+# EC2 Variables
+#############################################
+
 variable "component_names" {
   description = "List of component names to create EC2 instances for"
   type        = list(string)

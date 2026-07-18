@@ -9,12 +9,31 @@ web_interface_port = 8000
 api_port = 443
 role_name = "splunk-dev-role"
 profile_name = "splunk-dev-profile"
-managed_policy_arns = [ "arn:aws:iam::aws:policy/AdministratorAccess" ]
+component_names = {
+  "splunk-dev-license-master" = ""
+  "splunk-dev-universalforwarder" = ""
+  "splunk-dev-deployment-server" = ""
+  "splunk-dev-heavyforwarder" = ""
+  "splunk-dev-cluster-master" = ""
+  "splunk-dev-indexer1" = ""
+  "splunk-dev-indexer2" = ""
+  "splunk-dev-search-head-1" = ""
+  "splunk-dev-search-head-2" = ""
+  "splunk-dev-monitoring-console" = ""
+  "splunk-dev-search-head-3" = ""
+  "splunk-dev-deployer" = ""
+}
+
+ami = "ami-00adafae70b8029d8"
+instance_type = "t3.small"
+key_name = "aws-helpag"
+iam_instance_profile = "splunk-dev-profile"
+managed_policy_arns = ["arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"]
 tags = {
   Environment = "Development"
-  Project = "Splunk"
-  Team = "DevOps"
-  CreatedBy = "Terraform"
-  CreatedAt = "2026-07-18"
-  UpdatedAt = "2026-07-18"
+  Project     = "Splunk"
+  Team        = "DevOps"
+  CreatedBy   = "Terraform"
+  CreatedAt   = "2026-07-18"
+  UpdatedAt   = "2026-07-18"
 }
