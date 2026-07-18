@@ -29,7 +29,6 @@ variable "cidr_ipv4" {
 variable "ip_protocol" {
   description = "IP protocol for security group rules (e.g. tcp, udp, -1)."
   type        = string
-  default     = "tcp"
 }
 
 #############################################
@@ -39,25 +38,21 @@ variable "ip_protocol" {
 variable "management_port" {
   description = "Splunk Management Port (Default: 8089)"
   type        = number
-  default     = 8089
 }
 
 variable "receiving_port" {
   description = "Splunk Receiving Port for Universal/Heavy Forwarders (Default: 9997)"
   type        = number
-  default     = 9997
 }
 
 variable "web_interface_port" {
   description = "Splunk Web Interface Port (Default: 8000)"
   type        = number
-  default     = 8000
 }
 
 variable "api_port" {
   description = "HTTPS API Port (Default: 443)"
   type        = number
-  default     = 443
 }
 
 #############################################
