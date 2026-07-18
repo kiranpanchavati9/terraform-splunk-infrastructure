@@ -81,7 +81,18 @@ variable "tags" {
   default     = {}
 }
 
-variable "policy_name" {
-  description = "Name of the IAM Policy"
+variable "role_name" {
+  description = "Name of the IAM Role"
   type        = string
+}
+
+variable "profile_name" {
+  description = "Name of the IAM Instance Profile"
+  type        = string
+}
+
+variable "managed_policy_arns" {
+  description = "List of AWS Managed Policy ARNs"
+  type        = list(string)
+  default     = []
 }
