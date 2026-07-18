@@ -9,7 +9,23 @@ web_interface_port = 8000
 api_port = 443
 role_name = "splunk-prod-role"
 profile_name = "splunk-prod-profile"
-component_names = ["splunk-prod-license-master", "splunk-prod-universalforwarder", "splunk-prod-deployment-server", "splunk-prod-heavyforwarder", "splunk-prod-cluster-master", "splunk-prod-indexer1", "splunk-prod-indexer2", "splunk-prod-search-head-1", "splunk-prod-search-head-2", "splunk-prod-monitoring-console", "splunk-prod-search-head-3", "splunk-prod-deployer"]
+
+component_names = {
+  "splunk-prod-license-master" = ""
+  "splunk-prod-universalforwarder" = ""
+  "splunk-prod-deployment-server" = ""
+  "splunk-prod-heavyforwarder" = ""
+  "splunk-prod-cluster-master" = ""
+  "splunk-prod-indexer1" = ""
+  "splunk-prod-indexer2" = ""
+  "splunk-prod-search-head-1" = ""
+  "splunk-prod-search-head-2" = ""
+  "splunk-prod-monitoring-console" = ""
+  "splunk-prod-search-head-3" = ""
+  "splunk-prod-deployer" = ""
+}
+
+
 ami = "ami-00adafae70b8029d8"
 instance_type = "t3.small"
 key_name = "aws-helpag"
