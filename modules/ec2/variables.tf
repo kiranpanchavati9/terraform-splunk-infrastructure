@@ -1,0 +1,24 @@
+variable "component_names" {
+  description = "List of component names to create EC2 instances for"
+  type        = list(string)
+}
+
+variable "ami" {
+  description = "AMI to use for the EC2 instances"
+  type        = string
+}
+
+variable "instance_type" {
+  description = "Instance type to use for the EC2 instances"
+  type        = string
+}
+
+variable "key_name" {
+  description = "Key name to use for the EC2 instances"
+  type        = string
+}
+
+variable "iam_instance_profile" {
+  description = "IAM instance profile to use for the EC2 instances"
+  type        = string
+}
