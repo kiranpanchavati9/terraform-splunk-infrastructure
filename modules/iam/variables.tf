@@ -13,3 +13,8 @@ variable "profile_name" {
   description = "IAM Instance Profile Name"
   type        = string
 }
+
+variable "policy_name" {
+  description = "IAM Policy Name"
+  type        = string
+}

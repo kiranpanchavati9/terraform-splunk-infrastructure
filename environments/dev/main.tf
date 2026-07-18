@@ -17,5 +17,6 @@ module "splunk_iam" {
     source = "../../modules/iam"
     role_name = var.role_name
     profile_name = var.profile_name
+    policy_name = var.policy_name
     tags = var.tags
 }

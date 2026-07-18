@@ -9,6 +9,7 @@ web_interface_port = 8000
 api_port = 443
 role_name = "splunk-prod-role"
 profile_name = "splunk-prod-profile"
+policy_name = "AdministratorAccess"
 tags = {
   Environment = "Production"
   Project = "Splunk"
