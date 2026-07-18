@@ -1,7 +1,7 @@
 ## Create EC2 instances for each component
 
 resource "aws_instance" "instance" {
-  for_each               = toset(var.component_names)
+  for_each               = var.component_names
   ami                    = var.ami
   instance_type          = var.instance_type
   key_name               = var.key_name
