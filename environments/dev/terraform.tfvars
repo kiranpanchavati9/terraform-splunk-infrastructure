@@ -1,0 +1,9 @@
+vpc_id = "vpc-0fcbf944165ec4597"
+cidr_ipv4 = "0.0.0.0/0"
+security_group_name = "splunk-dev-sg"
+security_group_description = "Splunk Development Security Group" 
+ip_protocol = "tcp"
+management_port = 8089
+receiving_port = 9997
+web_interface_port = 8000
+api_port = 443
