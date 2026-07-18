@@ -1,39 +1,45 @@
+#############################################
+# EC2 Outputs
+#############################################
+
 output "instance_ids" {
-  description = "The IDs of the EC2 instances"
-  value       = aws_instance.instance[*].id
+  description = "EC2 Instance IDs"
+
+  value = {
+    for name, instance in aws_instance.instance :
+    name => instance.id
+  }
 }
 
 output "instance_arns" {
-  description = "The ARNs of the EC2 instances"
-  value       = aws_instance.instance[*].arn
-}
+  description = "EC2 Instance ARNs"
 
-output "instance_names" {
-  description = "The names of the EC2 instances"
-  value       = aws_instance.instance[*].name
+  value = {
+    for name, instance in aws_instance.instance :
+    name => instance.arn
+  }
 }
 
 output "instance_public_ips" {
-  description = "The public IPs of the EC2 instances"
-  value       = aws_instance.instance[*].public_ip
+  description = "Public IP Addresses"
+
+  value = {
+    for name, instance in aws_instance.instance :
+    name => instance.public_ip
+  }
 }
 
 output "instance_private_ips" {
-  description = "The private IPs of the EC2 instances"
-  value       = aws_instance.instance[*].private_ip
+  description = "Private IP Addresses"
+
+  value = {
+    for name, instance in aws_instance.instance :
+    name => instance.private_ip
+  }
 }
 
-output "instance_security_group_ids" {
-  description = "The security group IDs of the EC2 instances"
-  value       = aws_instance.instance[*].security_group_ids
-}
+output "instance_names" {
+  description = "EC2 Instance Names"
 
-output "instance_security_group_names" {
-  description = "The security group names of the EC2 instances"
-  value       = aws_instance.instance[*].security_group_names
-}
-
-output "instance_security_group_descriptions" {
-  description = "The security group descriptions of the EC2 instances"
-  value       = aws_instance.instance[*].security_group_descriptions
+  value = keys(aws_instance.instance)
 }
