@@ -16,6 +16,17 @@ module "splunk_iam" {
     source = "../../modules/iam"
     role_name = var.role_name
     profile_name = var.profile_name
-    policy_name = var.policy_name
+    managed_policy_arns = var.managed_policy_arns
+    tags = var.tags
+}
+
+
+module "splunk_ec2" {
+    source = "../../modules/ec2"
+    component_names = var.component_names
+    ami = var.ami
+    instance_type = var.instance_type
+    key_name = var.key_name
+    iam_instance_profile = module.splunk_iam.instance_profile_name
     tags = var.tags
 }

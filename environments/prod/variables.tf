@@ -74,13 +74,39 @@ variable "profile_name" {
   type        = string
 }
 
+variable "managed_policy_arns" {
+  description = "List of AWS managed policy ARNs to attach to the IAM role"
+  type        = list(string)
+  default     = []
+}
+
 variable "tags" {
   description = "Tags for the IAM Role and Instance Profile"
   type        = map(string)
   default     = {}
 }
 
-variable "policy_name" {
-  description = "Name of the IAM Policy"
+variable "component_names" {
+  description = "List of component names to create EC2 instances for"
+  type        = list(string)
+}
+
+variable "ami" {
+  description = "AMI to use for the EC2 instances"
+  type        = string
+}
+
+variable "instance_type" {
+  description = "Instance type to use for the EC2 instances"
+  type        = string
+}
+
+variable "key_name" {
+  description = "Key name to use for the EC2 instances"
+  type        = string
+}
+
+variable "iam_instance_profile" {
+  description = "IAM instance profile to use for the EC2 instances"
   type        = string
 }

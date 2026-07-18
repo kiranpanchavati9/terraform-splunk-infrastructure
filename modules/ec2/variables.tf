@@ -22,3 +22,9 @@ variable "iam_instance_profile" {
   description = "IAM instance profile to use for the EC2 instances"
   type        = string
 }
+
+variable "tags" {
+  description = "Tags for the EC2 instances"
+  type        = map(string)
+  default     = {}
+}
