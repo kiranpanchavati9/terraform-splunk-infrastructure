@@ -1,2 +1,2 @@
 # terraform-splunk-infrastructure
-Terraform modules to provision AWS infrastructure and automate Splunk Enterprise deployment using cloud-init.
+Infrastructure as Code (IaC) for deploying and managing Splunk Enterprise on AWS using Terraform and cloud-init.
