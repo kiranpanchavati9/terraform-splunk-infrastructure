@@ -59,3 +59,24 @@ variable "api_port" {
   type        = number
   default     = 443
 }
+
+
+#############################################
+# IAM Variables
+#############################################
+
+variable "role_name" {
+  description = "Name of the IAM Role"
+  type        = string
+}
+
+variable "profile_name" {
+  description = "Name of the IAM Instance Profile"
+  type        = string
+}
+
+variable "tags" {
+  description = "Tags for the IAM Role and Instance Profile"
+  type        = map(string)
+  default     = {}
+}

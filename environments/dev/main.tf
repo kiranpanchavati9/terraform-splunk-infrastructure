@@ -11,3 +11,11 @@ module "splunk_security_group" {
     web_interface_port = var.web_interface_port
     api_port = var.api_port
 }
+
+
+module "splunk_iam" {
+    source = "../../modules/iam"
+    role_name = var.role_name
+    profile_name = var.profile_name
+    tags = var.tags
+}

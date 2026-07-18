@@ -7,3 +7,13 @@ management_port = 8089
 receiving_port = 9997
 web_interface_port = 8000
 api_port = 443
+role_name = "splunk-dev-role"
+profile_name = "splunk-dev-profile"
+tags = {
+  Environment = "Development"
+  Project = "Splunk"
+  Team = "DevOps"
+  CreatedBy = "Terraform"
+  CreatedAt = "2026-07-18"
+  UpdatedAt = "2026-07-18"
+}
