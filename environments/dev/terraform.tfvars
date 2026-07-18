@@ -27,7 +27,6 @@ component_names = {
 ami = "ami-00adafae70b8029d8"
 instance_type = "t3.small"
 key_name = "aws-helpag"
-iam_instance_profile = "splunk-dev-profile"
 managed_policy_arns = ["arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore"]
 tags = {
   Environment = "Development"
