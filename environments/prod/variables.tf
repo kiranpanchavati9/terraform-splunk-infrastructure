@@ -110,3 +110,8 @@ variable "iam_instance_profile" {
   description = "IAM instance profile to use for the EC2 instances"
   type        = string
 }
+
+variable "security_group_id" {
+  description = "Security group ID to use for the EC2 instances"
+  type        = string
+}
