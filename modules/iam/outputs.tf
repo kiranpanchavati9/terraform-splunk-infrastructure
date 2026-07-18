@@ -1,19 +1,27 @@
-output "role_name" {
-  description = "The name of the IAM Role"
-  value       = aws_iam_role.this.name
-}
+#############################################
+# IAM Outputs
+#############################################
 
-output "profile_name" {
-  description = "IAM Instance Profile Name"
-  value       = aws_iam_instance_profile.this.name
+output "role_name" {
+  description = "IAM Role Name"
+
+  value = aws_iam_role.this.name
 }
 
 output "role_arn" {
-  description = "The ARN of the IAM Role"
-  value       = aws_iam_role.this.arn
+  description = "IAM Role ARN"
+
+  value = aws_iam_role.this.arn
 }
 
-output "profile_arn" {
-  description = "The ARN of the IAM Instance Profile"
-  value       = aws_iam_instance_profile.this.arn
+output "instance_profile_name" {
+  description = "IAM Instance Profile Name"
+
+  value = aws_iam_instance_profile.this.name
+}
+
+output "instance_profile_arn" {
+  description = "IAM Instance Profile ARN"
+
+  value = aws_iam_instance_profile.this.arn
 }

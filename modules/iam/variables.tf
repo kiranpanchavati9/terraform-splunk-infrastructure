@@ -1,12 +1,10 @@
+#############################################
+# IAM Variables
+#############################################
+
 variable "role_name" {
   description = "IAM Role Name"
   type        = string
-}
-
-variable "tags" {
-  description = "Tags for the IAM Role"
-  type        = map(string)
-  default     = {}
 }
 
 variable "profile_name" {
@@ -14,7 +12,26 @@ variable "profile_name" {
   type        = string
 }
 
-variable "policy_name" {
-  description = "IAM Policy Name"
-  type        = string
+#############################################
+# Managed Policies
+#############################################
+
+variable "managed_policy_arns" {
+  description = "List of AWS Managed Policy ARNs"
+
+  type = list(string)
+
+  default = []
+}
+
+#############################################
+# Tags
+#############################################
+
+variable "tags" {
+  description = "Tags for IAM resources"
+
+  type = map(string)
+
+  default = {}
 }
