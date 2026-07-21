@@ -44,7 +44,7 @@ module "route53_prod" {
     "indexer1.prod.kiranpanchavati.online"        = module.splunk_ec2.instance_public_ips["indexer1"]
     "indexer2.prod.kiranpanchavati.online"        = module.splunk_ec2.instance_public_ips["indexer2"]
     "monitoring-console.prod.kiranpanchavati.online" = module.splunk_ec2.instance_public_ips["monitoring_console"]
-    "license-manager.prod.kiranpanchavati.online"    = module.splunk_ec2.instance_public_ips["license_manager"]
+    "license-master.prod.kiranpanchavati.online"    = module.splunk_ec2.instance_public_ips["license_master"]
     "deployment-server.prod.kiranpanchavati.online"  = module.splunk_ec2.instance_public_ips["deployment_server"]
     "heavyforwarder.prod.kiranpanchavati.online"    = module.splunk_ec2.instance_public_ips["heavyforwarder"]
   }
