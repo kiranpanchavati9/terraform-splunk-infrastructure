@@ -13,51 +13,51 @@ profile_name = "splunk-prod-profile"
 components = {
   indexer1 = {
     name = "splunk-prod-indexer1"
-    user_data = file("../../cloud-init/indexer.yml")
+    user_data = "../../cloud-init/indexer.yml"
   }
   indexer2 = {
     name = "splunk-prod-indexer2"
-    user_data = file("../../cloud-init/indexer.yml")
+    user_data = "../../cloud-init/indexer.yml"
   }
   search_head1 = {
     name = "splunk-prod-search-head-1"
-    user_data = file("../../cloud-init/search-head.yml")
+    user_data = "../../cloud-init/search-head.yml"
   }
   search_head2 = {
     name = "splunk-prod-search-head-2"
-    user_data = file("../../cloud-init/search-head.yml")
+    user_data = "../../cloud-init/search-head.yml"
   }
   search_head3 = {
     name = "splunk-prod-search-head-3"
-    user_data = file("../../cloud-init/search-head.yml")
+    user_data = "../../cloud-init/search-head.yml"
   }
   monitoring_console = {
     name = "splunk-prod-monitoring-console"
-    user_data = file("../../cloud-init/monitoring-console.yml")
+    user_data = "../../cloud-init/monitoring-console.yml"
   }
   deployer = {
     name = "splunk-prod-deployer"
-    user_data = file("../../cloud-init/deployer.yml")
+    user_data = "../../cloud-init/deployer.yml"
   }
   license_master = {
     name = "splunk-prod-license-master"
-    user_data = file("../../cloud-init/license-master.yml")
+    user_data = "../../cloud-init/license-master.yml"
   }
   universalforwarder = {
     name = "splunk-prod-universalforwarder"
-    user_data = file("../../cloud-init/universalforwarder.yml")
+    user_data = "../../cloud-init/universalforwarder.yml"
   }
   deployment_server = {
     name = "splunk-prod-deployment-server"
-    user_data = file("../../cloud-init/deployment-server.yml")
+    user_data = "../../cloud-init/deployment-server.yml"
   }
   heavyforwarder = {
     name = "splunk-prod-heavyforwarder"
-    user_data = file("../../cloud-init/heavyforwarder.yml")
+    user_data = "../../cloud-init/heavyforwarder.yml"
   }
   cluster_master = {
     name = "splunk-prod-cluster-master"
-    user_data = file("../../cloud-init/cluster-master.yml")
+    user_data = "../../cloud-init/cluster-master.yml"
   }
 }
 
