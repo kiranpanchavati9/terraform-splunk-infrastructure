@@ -1,6 +1,5 @@
 resource "aws_instance" "instance" {
-  for_each = toset(var.component_names)
-
+  for_each = var.components
   ami                  = var.ami
   instance_type        = var.instance_type
   key_name             = var.key_name
@@ -14,4 +13,6 @@ resource "aws_instance" "instance" {
     },
     var.tags
   )
+
+  user_data = var.user_data
 }

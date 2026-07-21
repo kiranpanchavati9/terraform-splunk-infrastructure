@@ -91,9 +91,12 @@ variable "tags" {
 # EC2 Variables
 #############################################
 
-variable "component_names" {
+variable "components" {
   description = "List of component names to create EC2 instances for"
-  type        = list(string)
+  type        = map(object({
+    name      = string
+    user_data = string
+  }))
 }
 
 variable "ami" {

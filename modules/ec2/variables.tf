@@ -1,6 +1,10 @@
-variable "component_names" {
-  description = "List of component names to create EC2 instances for"
-  type        = list(string)
+variable "components" {
+  description = "Splunk components"
+
+  type = map(object({
+    name      = string
+    user_data = string
+  }))
 }
 
 variable "ami" {
@@ -32,4 +36,10 @@ variable "tags" {
 variable "security_group_id" {
   description = "Security group ID to use for the EC2 instances"
   type        = string
+}
+
+variable "user_data" {
+  description = "User data to use for the EC2 instances"
+  type        = string
+  default     = null
 }

@@ -10,20 +10,57 @@ api_port = 443
 role_name = "splunk-prod-role"
 profile_name = "splunk-prod-profile"
 
-component_names = [
-  "splunk-dev-license-master",
-  "splunk-dev-universalforwarder",
-  "splunk-dev-deployment-server",
-  "splunk-dev-heavyforwarder",
-  "splunk-dev-cluster-master",
-  "splunk-dev-indexer1",
-  "splunk-dev-indexer2",
-  "splunk-dev-search-head-1",
-  "splunk-dev-search-head-2",
-  "splunk-dev-search-head-3",
-  "splunk-dev-monitoring-console",
-  "splunk-dev-deployer"
-]
+components = {
+  indexer1 = {
+    name = "splunk-prod-indexer1"
+    user_data = file("../../cloud-init/indexer.yml")
+  }
+  indexer2 = {
+    name = "splunk-prod-indexer2"
+    user_data = file("../../cloud-init/indexer.yml")
+  }
+  search_head1 = {
+    name = "splunk-prod-search-head-1"
+    user_data = file("../../cloud-init/search-head.yml")
+  }
+  search_head2 = {
+    name = "splunk-prod-search-head-2"
+    user_data = file("../../cloud-init/search-head.yml")
+  }
+  search_head3 = {
+    name = "splunk-prod-search-head-3"
+    user_data = file("../../cloud-init/search-head.yml")
+  }
+  monitoring_console = {
+    name = "splunk-prod-monitoring-console"
+    user_data = file("../../cloud-init/monitoring-console.yml")
+  }
+  deployer = {
+    name = "splunk-prod-deployer"
+    user_data = file("../../cloud-init/deployer.yml")
+  }
+  license_master = {
+    name = "splunk-prod-license-master"
+    user_data = file("../../cloud-init/license-master.yml")
+  }
+  universalforwarder = {
+    name = "splunk-prod-universalforwarder"
+    user_data = file("../../cloud-init/universalforwarder.yml")
+  }
+  deployment_server = {
+    name = "splunk-prod-deployment-server"
+    user_data = file("../../cloud-init/deployment-server.yml")
+  }
+  heavyforwarder = {
+    name = "splunk-prod-heavyforwarder"
+    user_data = file("../../cloud-init/heavyforwarder.yml")
+  }
+  cluster_master = {
+    name = "splunk-prod-cluster-master"
+    user_data = file("../../cloud-init/cluster-master.yml")
+  }
+}
+
 ami = "ami-00adafae70b8029d8"
 instance_type = "t3.small"
 key_name = "aws-helpag"

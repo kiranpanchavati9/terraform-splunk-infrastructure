@@ -94,9 +94,12 @@ variable "managed_policy_arns" {
 # EC2 Variables
 #############################################
 
-variable "component_names" {
+variable "components" {
   description = "List of component names to create EC2 instances for"
-  type        = list(string)
+  type        = map(object({
+    name      = string
+    user_data = string
+  }))
 }
 
 variable "ami" {
@@ -112,5 +115,11 @@ variable "instance_type" {
 variable "key_name" {
   description = "Key name to use for the EC2 instances"
   type        = string
+}
+
+variable "user_data" {
+  description = "User data to use for the EC2 instances"
+  type        = string
+  default     = null
 }
 
