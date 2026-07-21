@@ -86,3 +86,4 @@ tags = {
   CreatedAt   = "2026-07-18"
   UpdatedAt   = "2026-07-18"
 }
+zone_id = "Z01214421PKKTLXAI5VN5"

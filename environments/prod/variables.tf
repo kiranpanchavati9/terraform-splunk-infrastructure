@@ -128,3 +128,8 @@ variable "security_group_id" {
   description = "Security group ID to use for the EC2 instances"
   type        = string
 }
+
+variable "zone_id" {
+  description = "Route53 Hosted Zone ID"
+  type        = string
+}
