@@ -31,7 +31,6 @@ module "splunk_ec2" {
     key_name = var.key_name
     iam_instance_profile = module.splunk_iam.instance_profile_name
     tags = var.tags
-    user_data = var.user_data
 }
 
 

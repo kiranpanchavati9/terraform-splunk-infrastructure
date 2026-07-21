@@ -9,10 +9,10 @@ resource "aws_instance" "instance" {
 
   tags = merge(
     {
-      Name = each.key
+      Name = each.value.name
     },
     var.tags
   )
 
-  user_data = var.user_data
+  user_data = file(each.value.user_data)
 }

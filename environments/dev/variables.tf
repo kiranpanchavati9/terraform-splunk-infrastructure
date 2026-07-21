@@ -95,8 +95,8 @@ variable "managed_policy_arns" {
 #############################################
 
 variable "components" {
-  description = "List of component names to create EC2 instances for"
-  type        = map(object({
+  description = "Map of Splunk components to create EC2 instances for"
+  type = map(object({
     name      = string
     user_data = string
   }))
@@ -115,11 +115,5 @@ variable "instance_type" {
 variable "key_name" {
   description = "Key name to use for the EC2 instances"
   type        = string
-}
-
-variable "user_data" {
-  description = "User data to use for the EC2 instances"
-  type        = string
-  default     = null
 }
 

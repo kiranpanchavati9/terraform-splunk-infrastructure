@@ -88,4 +88,3 @@ tags = {
   CreatedAt   = "2026-07-18"
   UpdatedAt   = "2026-07-18"
 }
-user_data = "../../cloud-init/indexer.yml"
