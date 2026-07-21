@@ -1,0 +1,17 @@
+#cloud-config
+
+package_update: true
+package_upgrade: true
+
+packages:
+  - curl
+  - wget
+  - unzip
+
+runcmd:
+  - mkdir -p /opt/splunk-install
+  - cd /opt/splunk-install
+  - curl -L -o splunk.sh https://raw.githubusercontent.com/kiranpanchavati9/splunk-script/main/splunk.sh
+  - chmod +x splunk.sh
+  - bash splunk.sh
+
