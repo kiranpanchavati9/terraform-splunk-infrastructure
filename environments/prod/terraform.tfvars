@@ -33,31 +33,31 @@ components = {
   }
   monitoring_console = {
     name = "splunk-prod-monitoring-console"
-    user_data = "../../cloud-init/monitoring-console.yml"
+    user_data = "../../cloud-init/splunk-monitoringconsole.yml"
   }
   deployer = {
     name = "splunk-prod-deployer"
-    user_data = "../../cloud-init/deployer.yml"
+    user_data = "../../cloud-init/splunk-deployer.yml"
   }
   license_master = {
     name = "splunk-prod-license-master"
-    user_data = "../../cloud-init/license-master.yml"
+    user_data = "../../cloud-init/splunk-license-master.yml"
   }
   universalforwarder = {
     name = "splunk-prod-universalforwarder"
-    user_data = "../../cloud-init/universalforwarder.yml"
+    user_data = "../../cloud-init/splunk-uf.yml"
   }
   deployment_server = {
     name = "splunk-prod-deployment-server"
-    user_data = "../../cloud-init/deployment-server.yml"
+    user_data = "../../cloud-init/splunk-deployment-server.yml"
   }
   heavyforwarder = {
     name = "splunk-prod-heavyforwarder"
-    user_data = "../../cloud-init/heavyforwarder.yml"
+    user_data = "../../cloud-init/splunk-hf.yml"
   }
   cluster_master = {
     name = "splunk-prod-cluster-master"
-    user_data = "../../cloud-init/cluster-master.yml"
+    user_data = "../../cloud-init/splunk-cluster-master.yml"
   }
 }
 
