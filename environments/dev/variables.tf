@@ -117,3 +117,7 @@ variable "key_name" {
   type        = string
 }
 
+variable "ssh_port" {
+  description = "SSH Port (Default: 22)"
+  type        = number
+}

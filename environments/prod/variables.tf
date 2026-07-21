@@ -60,6 +60,11 @@ variable "api_port" {
   default     = 443
 }
 
+variable "ssh_port" {
+  description = "SSH Port (Default: 22)"
+  type        = number
+}
+
 #############################################
 # IAM Variables
 #############################################

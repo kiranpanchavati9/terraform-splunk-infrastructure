@@ -50,6 +50,12 @@ variable "web_interface_port" {
   type        = number
 }
 
+
+variable "ssh_port" {
+  description = "SSH Port (Default: 22)"
+  type        = number
+}
+
 variable "api_port" {
   description = "HTTPS API Port (Default: 443)"
   type        = number

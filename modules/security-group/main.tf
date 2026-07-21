@@ -65,6 +65,19 @@ resource "aws_vpc_security_group_ingress_rule" "web" {
   }
 }
 
+resource "aws_vpc_security_group_ingress_rule" "ssh" {
+  security_group_id = aws_security_group.this.id
+  cidr_ipv4         = var.cidr_ipv4
+  from_port         = var.ssh_port
+  to_port           = var.ssh_port
+  ip_protocol       = var.ip_protocol
+  tags = {
+    Name = "splunk-ssh-ingress"
+  }
+}
+
+
+
 # Allow Splunk API Traffic (Outbound)
 
 resource "aws_vpc_security_group_egress_rule" "api" {

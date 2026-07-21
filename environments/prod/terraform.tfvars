@@ -7,6 +7,7 @@ management_port = 8089
 receiving_port = 9997
 web_interface_port = 8000
 api_port = 443
+ssh_port = 22
 role_name = "splunk-prod-role"
 profile_name = "splunk-prod-profile"
 

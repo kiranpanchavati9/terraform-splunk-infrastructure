@@ -10,6 +10,7 @@ module "splunk_security_group" {
     receiving_port = var.receiving_port
     web_interface_port = var.web_interface_port
     api_port = var.api_port
+    ssh_port = var.ssh_port
 }
 
 
