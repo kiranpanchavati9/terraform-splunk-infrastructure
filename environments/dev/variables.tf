@@ -121,3 +121,4 @@ variable "ssh_port" {
   description = "SSH Port (Default: 22)"
   type        = number
 }
+

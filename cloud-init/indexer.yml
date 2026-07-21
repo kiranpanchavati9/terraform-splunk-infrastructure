@@ -3,6 +3,23 @@
 package_update: true
 
 runcmd:
+  # Install Splunk
   - curl -L -o /tmp/splunk.sh https://raw.githubusercontent.com/kiranpanchavati9/splunk-script/main/splunk.sh
   - chmod +x /tmp/splunk.sh
   - /tmp/splunk.sh indexer
+
+  # Wait  until the Splunk status is ready
+  - until /opt/splunk/bin/splunk status >/dev/null 2>&1; do sleep 10; done
+
+  # Configure Indexer
+  - >
+    /opt/splunk/bin/splunk edit cluster-config
+    -mode peer
+    -secret "SplunkCluster@123"
+    -cluster_label "Splunk-Prod-Cluster"
+    -auth admin:Pa55word
+
+# Restart Splunk
+  - /opt/splunk/bin/splunk restart
+
+
