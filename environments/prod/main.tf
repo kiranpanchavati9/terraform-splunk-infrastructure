@@ -41,5 +41,11 @@ module "route53_prod" {
     "search-head1.prod.kiranpanchavati.online"    = module.splunk_ec2.instance_public_ips["search_head1"]
     "search-head2.prod.kiranpanchavati.online"    = module.splunk_ec2.instance_public_ips["search_head2"]
     "search-head3.prod.kiranpanchavati.online"    = module.splunk_ec2.instance_public_ips["search_head3"]
+    "indexer1.prod.kiranpanchavati.online"        = module.splunk_ec2.instance_public_ips["indexer1"]
+    "indexer2.prod.kiranpanchavati.online"        = module.splunk_ec2.instance_public_ips["indexer2"]
+    "monitoring-console.prod.kiranpanchavati.online" = module.splunk_ec2.instance_public_ips["monitoring_console"]
+    "license-manager.prod.kiranpanchavati.online"    = module.splunk_ec2.instance_public_ips["license_manager"]
+    "deployment-server.prod.kiranpanchavati.online"  = module.splunk_ec2.instance_public_ips["deployment_server"]
+    "heavyforwarder.prod.kiranpanchavati.online"    = module.splunk_ec2.instance_public_ips["heavyforwarder"]
   }
 }

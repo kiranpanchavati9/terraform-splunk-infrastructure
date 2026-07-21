@@ -41,5 +41,11 @@ module "route53_dev" {
     "search-head1.dev.kiranpanchavati.online"    = module.splunk_ec2.instance_public_ips["search_head1"]
     "search-head2.dev.kiranpanchavati.online"    = module.splunk_ec2.instance_public_ips["search_head2"]
     "search-head3.dev.kiranpanchavati.online"    = module.splunk_ec2.instance_public_ips["search_head3"]
+    "indexer1.dev.kiranpanchavati.online"        = module.splunk_ec2.instance_public_ips["indexer1"]
+    "indexer2.dev.kiranpanchavati.online"        = module.splunk_ec2.instance_public_ips["indexer2"]
+    "monitoring-console.dev.kiranpanchavati.online" = module.splunk_ec2.instance_public_ips["monitoring_console"]
+    "license-manager.dev.kiranpanchavati.online"    = module.splunk_ec2.instance_public_ips["license_manager"]
+    "deployment-server.dev.kiranpanchavati.online"  = module.splunk_ec2.instance_public_ips["deployment_server"]
+    "heavyforwarder.dev.kiranpanchavati.online"    = module.splunk_ec2.instance_public_ips["heavyforwarder"]
   }
 }
