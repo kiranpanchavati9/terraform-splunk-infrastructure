@@ -44,10 +44,7 @@ components = {
     name = "splunk-dev-license-master"
     user_data = "../../cloud-init/splunk-license-master.yml"
   }
-  universalforwarder = {
-    name = "splunk-dev-universalforwarder"
-    user_data = "../../cloud-init/splunk-uf.yml"
-  }
+
   deployment_server = {
     name = "splunk-dev-deployment-server"
     user_data = "../../cloud-init/splunk-deployment-server.yml"

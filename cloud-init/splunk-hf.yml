@@ -1,0 +1,8 @@
+#cloud-config
+
+package_update: true
+
+runcmd:
+  - curl -L -o /tmp/splunk.sh https://raw.githubusercontent.com/kiranpanchavati9/splunk-script/main/splunk.sh
+  - chmod +x /tmp/splunk.sh
+  - /tmp/splunk.sh splunk-hf
